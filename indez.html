@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio v1</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Header / Navigation */
+        header {
+            text-align: center;
+            position: sticky;
+            top: 0;
+            padding: 10px 0;
+            background-color: #333;
+        }
+
+        .navigation-bar ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .navigation-bar ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        .navigation-bar ul li a {
+            text-decoration: none;
+            color: white;
+            padding: 0px 30px;
+        }
+
+        /* Home Section */
+        .container {
+            display: flex;
+            height: 100vh;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .same-margin {
+            margin: auto;
+        }
+
+        .div-1 {
+            width: 60%;
+            text-align: justify;
+            padding: 0px 60px 0px 30px;
+        }
+
+        .div-1 h2 span {
+            color: #7e74f7;
+            font-size: 14px;
+        }
+
+        .div-1 p {
+            color: grey;
+            font-size: 14px; 
+            line-height: 1.6;
+        }
+
+        .div-2 {
+            width: 40%;
+            display: flex;
+            justify-content: center;
+        }
+
+        .div-2 img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        /* Skills Section */
+        #skills-section {
+            text-align: center;
+            padding: 50px 0;
+        }
+
+        #skills-section h1 {
+            font-size: 28px;
+            color: white;
+            margin-bottom: 40px;
+        }
+
+        .skill-container {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap; 
+        }
+
+        .skill-card {
+            width: 320px;
+            height: 260px;
+            background-color: white;
+            border-radius: 8px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: grey;
+            text-align: center;
+            padding: 20px;
+            box-sizing: border-box;
+            overflow: hidden; 
+        }
+
+        .skill-card h2 {
+            color: black;
+            font-size: 20px;
+            font-weight: normal;
+            margin-bottom: 10px;
+        }
+
+        .skill-card p {
+            font-size: 14px;
+            line-height: 1.4;
+            font-family: 'Georgia', serif; 
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+        }
+
+        /* Portfolio Section */
+        #portfolio-section {
+            text-align: center;
+            padding: 50px 0;
+        }
+
+        #portfolio-section h1 {
+            font-size: 28px;
+            color: white;
+            margin-bottom: 40px;
+        }
+
+        .portfolio-container {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+
+        .portfolio-card {
+            width: 320px;
+            background-color: white;
+            border-radius: 8px;
+            text-align: center;
+            padding: 20px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        .portfolio-card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .portfolio-card h2 {
+            color: black;
+            font-size: 20px;
+            font-weight: normal;
+            margin-bottom: 10px;
+        }
+
+        .portfolio-card p {
+            color: grey;
+            font-size: 14px;
+            line-height: 1.4;
+        }
+
+        /* Testimonials Section */
+        #testimonials-section {
+            text-align: center;
+            padding: 50px 0;
+        }
+
+        #testimonials-section h1 {
+            font-size: 28px;
+            color: white;
+            margin-bottom: 40px;
+        }
+
+        .testimonial-container {
+            display: flex;
+            justify-content: center;
+        }
+
+        .testimonial-card {
+            display: flex;
+            align-items: center;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            width: 600px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        .testimonial-text {
+            flex: 1;
+            text-align: left;
+        }
+
+        .testimonial-text h2 {
+            color: white;
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .testimonial-text p {
+            color: grey;
+            font-size: 14px;
+            line-height: 1.4;
+        }
+
+        .read-more {
+            background-color: green;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            font-size: 14px;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        .testimonial-card img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            margin-left: 20px;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav class="navigation-bar">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#skills-section">Skills</a></li>
+                <li><a href="#portfolio-section">Worked on</a></li>
+                <li><a href="#testimonials-section">Testimonials</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home-section">
+        <div class="container">
+            <div class="same-margin div-1">
+                <div class="content">
+                    <h2>Alvin<span>Cruz</span></h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit...</p>
+                </div>
+            </div>
+            <div class="same-margin div-2">
+                <img src="man-with-beard-avatar-character-isolated-icon-free-vector.jpg" alt="User Image">
+            </div>
+        </div>
+    </section>
+
+    <section id="skills-section">
+        <h1>Specialized in</h1>
+        <div class="skill-container">
+            <div class="skill-card"><h2>Skill 1</h2><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut sunt fugit provident quia debitis soluta placeat quas? Veritatis, commodi iste tempore. </p></div>
+            <div class="skill-card"><h2>Skill 2</h2><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut sunt fugit provident quia debitis soluta placeat quas? Veritatis, commodi iste tempore.</p></div>
+            <div class="skill-card"><h2>Skill 3</h2><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut sunt fugit provident quia debitis soluta placeat quas? Veritatis, commodi iste tempore.</p></div>
+        </div>
+    </section>
+
+    <section id="portfolio-section">
+        <h1>Worked on</h1>
+        <div class="portfolio-container">
+            <div class="portfolio-card"><img src="ol.png"><h2>Project 1</h2><p>Lorem ipsum...</p></div>
+            <div class="portfolio-card"><img src="uj.png"><h2>Project 2</h2><p>Lorem ipsum...</p></div>
+            <div class="portfolio-card"><img src="Screenshot 2025-02-03 111832.png"><h2>Project 3</h2><p>Lorem ipsum...</p></div>
+        </div>
+    </section>
+
+    <section id="testimonials-section">
+        <h1>Testimonials</h1>
+        <div class="testimonial-container">
+            <div class="testimonial-card">
+                <div class="testimonial-text"><h2>John Doe</h2><p>Alvin is an amzing programmer.</p><button class="read-more">Read More</button></div>
+                <img src="images.jpg">
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>
